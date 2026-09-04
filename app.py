@@ -9,7 +9,7 @@ from google import genai
 from google.genai import types
 from docx import Document
 
-MODEL = "gemini-2.5-flash"
+MODEL = "gemini-3.6-flash"
 
 st.set_page_config(
     page_title="AI Resume ATS Analyzer",
