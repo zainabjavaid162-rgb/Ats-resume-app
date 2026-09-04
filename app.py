@@ -133,7 +133,6 @@ Target job description:
                 temp_path = tmp.name
 
             uploaded_to_gemini = client.files.upload(file=temp_path)
-
             response = client.models.generate_content(
                 model=MODEL,
                 contents=[
@@ -145,7 +144,7 @@ Target job description:
                 ],
                 config=types.GenerateContentConfig(
                     response_mime_type="application/json",
-                    temperature=0.2,
+                    
                     max_output_tokens=5000,
                 ),
             )
@@ -159,7 +158,7 @@ Target job description:
                 contents=f"{instructions}\n\nRESUME TEXT:\n{resume_text}",
                 config=types.GenerateContentConfig(
                     response_mime_type="application/json",
-                    temperature=0.2,
+
                     max_output_tokens=5000,
                 ),
             )
@@ -173,7 +172,7 @@ Target job description:
                 contents=f"{instructions}\n\nRESUME TEXT:\n{resume_text}",
                 config=types.GenerateContentConfig(
                     response_mime_type="application/json",
-                    temperature=0.2,
+        
                     max_output_tokens=5000,
                 ),
             )
